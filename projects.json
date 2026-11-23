@@ -1,0 +1,46 @@
+[
+  {
+    "id": "skillpath-ai",
+    "title": "SkillPath AI - 채용공고 기반 역량 분석·교육과정 추천 에이전트",
+    "period": { "start": "2026-11", "end": "2026-11" },
+    "tech": ["Python", "Amazon Bedrock", "Amazon S3 Vectors", "AWS Lambda", "Streamlit"],
+    "thumbnail": "https://opengraph.githubassets.com/1/Sungsim-Metro/skillpath-ai",
+    "overview": "채용공고에서 요구 기술을 근거 문장과 함께 추출하고, 사용자의 보유 기술과 비교해 부족한 역량(Gap)과 AWS 교육과정을 추천 이유와 함께 보여주는 AI 에이전트입니다. AI Bootcamp Innovation Challenger 2026 출품작입니다.",
+    "role": "4인 팀(ASAP하게)에서 데이터 파이프라인 담당. 채용공고 수집·전처리, 기술 별칭 사전과 표현 표준화(normalize_skill), Titan 임베딩 기반 교육과정 검색(search_courses), 키워드·임베딩·BM25 하이브리드 검색 비교, NCS 능력단위 매핑 초안을 맡았습니다.",
+    "result": "검색 방식을 감으로 고르지 않고 정답 초안과 방식별 비교표를 만들어 근거를 남긴 뒤 결정했습니다. 공고 데이터 출처별 수집 결과·한계·이용조건을 문서로 정리하며, AI 서비스에서 데이터 품질과 근거 제시가 얼마나 중요한지 배웠습니다.",
+    "github": "https://github.com/Sungsim-Metro/skillpath-ai"
+  },
+  {
+    "id": "ropecker-trace",
+    "title": "ROPecker-trace - ROP 공격 탐지 논문 재현",
+    "period": { "start": "2026-11", "end": null },
+    "tech": ["Python", "Capstone", "pyelftools", "Docker"],
+    "thumbnail": "https://opengraph.githubassets.com/1/syujin2323/ropecker-trace",
+    "overview": "ROPecker(NDSS 2014)의 gadget 연쇄 탐지 로직을 실행 트레이스 기반 명령행 도구로 재현하는 소프트웨어및시스템보안 수업 논문 구현 프로젝트입니다.",
+    "role": "팀 프로젝트에서 gadget DB 레인 담당. 실행 파일과 공유 라이브러리(rop_vault, libc, ld-linux)를 스캔해 gadget DB를 생성·저장·조회하는 gadgetdb 모듈을 구현했습니다.",
+    "result": "레인별 계약(model.py)과 테스트를 먼저 정해 두고 각자 구현을 끼워 넣는 방식으로 협업했습니다. 바이너리 분석 도구(Capstone, pyelftools)로 명령어를 분류하며 ROP 공격 원리를 직접 다뤄 봤습니다.",
+    "github": "https://github.com/syujin2323/ropecker-trace"
+  },
+  {
+    "id": "remembrall",
+    "title": "REMEMBRALL - 저장한 장소를 필요할 때 꺼내 주는 AI 앱",
+    "period": { "start": "2026-09", "end": "2026-11" },
+    "tech": ["Spring Boot", "PostgreSQL", "Spring AI", "pgvector", "Gemini API", "Java"],
+    "thumbnail": "https://opengraph.githubassets.com/1/kakaotechcampus-4/ktc4-chungnam-3",
+    "overview": "인스타그램·유튜브에서 공유한 콘텐츠를 에이전트가 요약·분류하고 장소·일정 정보를 추출해, 저장한 장소 근처에 가거나 일정이 다가오면 먼저 알려 주는 앱입니다. 카카오테크 캠퍼스 4기 2단계 팀 프로젝트입니다.",
+    "role": "6인 팀의 AI 리드, 백엔드 담당. 콘텐츠 저장 파이프라인을 설계·구현하고, 추출한 장소를 실제 가게로 확정하는 로직(VWorld·카카오 장소 검색·공공 상가정보 교차검증, 프랜차이즈 지점 데이터 적재)과 장소 되묻기 API, 저장한 장소 목록 API를 만들었습니다.",
+    "result": "한 가지 데이터만으로는 프랜차이즈 직영점이나 지점명 없는 개인 가게를 확정하기 어려워, 여러 공공·지도 데이터를 교차검증하는 방식으로 정확도를 높였습니다. '장소 없음'과 'API 오류'를 구분하는 예외 처리, 외부 API 타임아웃, 멘토 코드 리뷰 반영을 거치며 운영 가능한 백엔드를 만드는 법을 배웠습니다.",
+    "github": "https://github.com/kakaotechcampus-4/ktc4-chungnam-3"
+  },
+  {
+    "id": "nana-agent",
+    "title": "일정 관리 AI 에이전트 Nana",
+    "period": { "start": "2026-06", "end": "2026-08" },
+    "tech": ["Python", "LangChain", "MCP", "ChromaDB", "SQLite", "Gradio"],
+    "thumbnail": "https://opengraph.githubassets.com/1/kakaotechcampus-4/chungnam-clone",
+    "overview": "카카오테크 캠퍼스 4기 1단계에서 주차별로 기능을 쌓아 만든 일정 관리 AI 에이전트입니다. 개인 일정 관리부터 지난 대화 검색, 그룹 일정 조율까지 다룹니다.",
+    "role": "개인 과제로 6주간 구현. 개인 일정 CRUD tool, 구조화된 요청 처리, SQLite 저장·조회·수정·삭제, 출처별 RAG 검색 tool, MCP tool로 지난 대화 검색, supervisor가 하위 에이전트(Nana/Kana)에 작업을 위임하는 구조를 만들었습니다.",
+    "result": "단일 에이전트에서 시작해 tool 호출, RAG, MCP, 멀티 에이전트 위임 구조까지 단계적으로 확장해 봤습니다. 하위 에이전트는 supervisor의 시스템 프롬프트를 공유하지 않는다는 점을 이해하고, 역할별로 독립된 프롬프트를 설계했습니다.",
+    "github": "https://github.com/kakaotechcampus-4/chungnam-clone/tree/kimjonghoon/final"
+  }
+]

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김종훈 | 포트폴리오</title>
+  <meta name="description" content="클라우드와 데이터베이스를 활용해 직접 서비스를 설계·구현하는 개발자 김종훈의 포트폴리오">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="logo">김종훈</a>
+    <nav aria-label="주요 메뉴">
+      <ul>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+        <li><a href="#guestbook">방명록</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- S01 홈 -->
+    <section id="home" class="hero">
+      <!-- TODO: 실제 프로필 사진으로 교체 -->
+      <img src="images/profile.svg" alt="김종훈 프로필 사진" class="profile" width="180" height="180">
+      <h1>김종훈</h1>
+      <p class="tagline">클라우드와 데이터베이스를 활용해 직접 서비스를 설계·구현하는 개발자</p>
+    </section>
+
+    <!-- S02 소개 -->
+    <section id="about">
+      <h2>소개</h2>
+      <div class="grid-2">
+        <div class="box">
+          <h3>학력</h3>
+          <p>충남대학교 컴퓨터융합학부</p>
+        </div>
+        <div class="box">
+          <h3>관심 분야</h3>
+          <ul class="dots">
+            <li>클라우드 아키텍처 (AWS)</li>
+            <li>데이터베이스 설계·운영</li>
+            <li>서버리스 백엔드</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>기술 스택</h3>
+      <div class="stack">
+        <div class="box">
+          <h4>언어</h4>
+          <ul class="icons">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="40" height="40">Java</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="40" height="40">Python</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h4>프레임워크</h4>
+          <ul class="icons">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/spring/spring-original.svg" alt="" width="40" height="40">Spring Boot</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="" width="40" height="40">Node.js</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h4>클라우드·DB</h4>
+          <ul class="icons">
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="40" height="40">AWS</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="40" height="40">MySQL</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" width="40" height="40">PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- S03 프로젝트 -->
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div id="project-list" class="cards" aria-live="polite"></div>
+    </section>
+
+    <!-- S04 연락처 -->
+    <section id="contact">
+      <h2>연락처</h2>
+      <p class="lead">협업 제안이나 질문은 언제든 편하게 연락 주세요. 보통 1~2일 안에 답장드립니다.</p>
+      <ul class="contact">
+        <li><span>이메일</span><a href="mailto:whdgnsdl0812@gmail.com">whdgnsdl0812@gmail.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/202202571" target="_blank" rel="noopener">github.com/202202571</a></li>
+      </ul>
+    </section>
+
+    <!-- S05 방명록 -->
+    <section id="guestbook">
+      <h2>방명록</h2>
+      <form id="gb-form" class="box" novalidate>
+        <label for="gb-name">이름</label>
+        <input id="gb-name" name="name" maxlength="20" autocomplete="name" aria-describedby="gb-name-err">
+        <p id="gb-name-err" class="err"></p>
+
+        <label for="gb-message">메시지</label>
+        <textarea id="gb-message" name="message" rows="3" maxlength="200" aria-describedby="gb-message-err"></textarea>
+        <p id="gb-message-err" class="err"></p>
+
+        <button type="submit">등록</button>
+        <p id="gb-status" class="ok" role="status"></p>
+      </form>
+      <ul id="gb-list" class="gb-list"></ul>
+      <button id="gb-more" type="button" class="secondary" hidden>더 보기</button>
+    </section>
+  </main>
+
+  <footer>© 2026 김종훈</footer>
+
+  <!-- 프로젝트 상세 창 -->
+  <dialog id="project-dialog" aria-labelledby="pd-title">
+    <div class="dialog-body">
+      <div id="pd-content"></div>
+      <button type="button" id="pd-close">닫기</button>
+    </div>
+  </dialog>
+</body>
+</html>
